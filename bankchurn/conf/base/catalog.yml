@@ -1,0 +1,15 @@
+train: 
+  type: pandas.CSVDataset
+  filepath: data/01_raw/train.csv
+
+test:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/test.csv
+
+"preprocessed_{subtype}_data": 
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/preprocessed_{subtype}_data.pq
+
+"engineered_{subtype}_data":
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/engineered_{subtype}_data.pq
