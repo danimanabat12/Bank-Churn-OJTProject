@@ -13,3 +13,9 @@ test:
 "engineered_{subtype}_data":
   type: pandas.ParquetDataset
   filepath: data/05_model_input/engineered_{subtype}_data.pq
+
+# Kung unsay output kay "model", mao iyang buhatan. Naa koy output nga model sa pipeline which is katong lgbm keme
+"{subtype}_modelling_pipeline.model": 
+  type: pickle.PickleDataset
+  filepath: data/06_models/LGBM_{subtype}.pkl
+  versioned: True

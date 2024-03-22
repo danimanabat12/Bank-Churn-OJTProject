@@ -1,6 +1,7 @@
 """bankchurn file for ensuring the package is executable
 as `bankchurn` and `python -m bankchurn`
 """
+
 import importlib
 from pathlib import Path
 

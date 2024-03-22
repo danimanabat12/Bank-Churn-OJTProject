@@ -3,3 +3,43 @@
 #
 # Documentation for this file format can be found in "Parameters"
 # Link: https://docs.kedro.org/en/0.19.3/configuration/parameters.html
+
+active_modelling_pipeline:
+  model_options: 
+    test_size: 0.2
+    random_state: 1
+    sampling_strategy: 'auto'
+    features: 
+      - CreditScore 
+      - Gender
+      - Age
+      - Tenure
+      - Balance
+      - NumOfProducts
+      - HasCrCard
+      - IsActiveMember
+      - EstimatedSalary
+      - Geography_France
+      - Geography_Germany
+      - Geography_Spain
+    scale_features:
+      - CreditScore
+      - Balance
+      - EstimatedSalary
+
+candidate_modelling_pipeline:
+  model_options: 
+    test_size: 0.3
+    random_state: 2
+    sampling_strategy: 'auto'
+    features: 
+      - Gender 
+      - Age
+      - Balance
+      - NumOfProducts
+      - IsActiveMember
+      - Geography_France
+      - Geography_Germany
+      - Geography_Spain
+    scale_features:
+      - Balance
